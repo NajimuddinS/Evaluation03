@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterLand</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    nav.container{
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-evenly; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .logo{
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        max-width: 290px;
+        align-items: center;
+        font-size: 25px;
+        padding-top: 5px;
+        
+    }
+
+    .lables{
+        margin-left: 100px;
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        span{
+            padding-left: 30px; 
+            font-weight: 500;
+            font-size: large;
+        }
+        span:hover{
+            color: #3CBEEE;
+            transition: all 0.5s ease-out;
+        }
+        
+        
+    }
+    .icos{
+        margin-left: 100px;
+        .sm{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+    }
+
+    .fa-brands{
+                margin-left: 10px;
+            }
+
+    .fa-brands:hover{
+    color: #3CBEEE;
+    transition: all 0.5s ease-out;
+        }
+
+    .gs{
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        margin-left: 30px;
+        background-color: #3CBEEE;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 50px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .gs:hover{
+    background-color: black;
+    transition: all 0.5s ease-out;
+        }
+
+    .bannerbg{
+        background-image: url(/Evaluation03/carousel-1.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        margin-bottom: 100px;
+    }
+    .banner{
+        opacity: 100%;
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+    }
+
+    .sec1{
+        padding-top: 180px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        max-width: 750px;
+        .top{
+            font-size: 24px;
+            font-weight: 700;
+            color: #3CBEEE;
+            margin-bottom: 30px;
+        }
+        h1{
+            font-size: 55px;
+            margin-bottom: 30px;
+        }
+        .lo{
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+        button{
+            padding: 18px;
+            border-radius: 50px;
+            width: 200px;
+            font-family: "Open Sans", sans-serif;
+            color: white;
+            background-color: #3CBEEE;
+            font-size: 18px;
+            border: none;
+            font-weight: 500;
+        }
+    }
+
+    .sec2{
+        width: 500px;
+        background:rgb(255, 255, 255,0.5);
+        margin-top: 100px;
+        padding: 50px;
+        border-radius: 10px;
+        h1{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        input{
+            border:none;
+            border-radius: 10px;
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        #select{
+            border:none;
+            border-radius: 10px;
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            color: grey;
+            margin-bottom: 20px;
+        }
+
+        ::placeholder{
+            padding-left: 10px;
+            font-size: larger;
+        }
+    }
+
+    #date{
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: grey;
+    }
+
+    .submit{
+        width: 100%;
+        background-color: #3CBEEE;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: large;
+    }
+
+    .grid{
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .con{
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+
+        p{
+            font-size: 24px;
+            font-weight: 500;
+            color: #3CBEEE;
+        }
+        .t{
+            margin: auto;
+            font-size: 42px;
+            max-width: 600px;
+        }
+        .lor{
+            color: black;
+            font-size: small;
+            max-width: 750px;
+            margin: auto;
+            margin-top:30px;
+        }
+    }
+
+    .grids{
+        display: grid; 
+        grid-template-areas: "a1 a1 a2 a3"
+                              "a4 a5 a6 a6";
+    }
+
+    .grids>div:nth-of-type(1){
+        grid-area: 'a1';
+    }
+
+    .grids>div:nth-of-type(2){
+        grid-area: 'a2';
+    }
+
+    .grids>div:nth-of-type(3){
+        grid-area: 'a3';
+    }
+
+    .grids>div:nth-of-type(4){
+        grid-area: 'a4';
+    }
+
+    .grids>div:nth-of-type(5){
+        grid-area: 'a5';
+    }
+
+    .grids>div:nth-of-type(6){
+        grid-area: 'a6';
+    }
+
+</style>
+<body>
+    <nav class="container">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" height="52" width="56" viewBox="0 0 576 512"><path fill="#3CBEEE" d="M309.5 178.4L447.9 297.1c-1.6 .9-3.2 2-4.8 3c-18 12.4-40.1 20.3-59.2 20.3c-19.6 0-40.8-7.7-59.2-20.3c-22.1-15.5-51.6-15.5-73.7 0c-17.1 11.8-38 20.3-59.2 20.3c-10.1 0-21.1-2.2-31.9-6.2C163.1 193.2 262.2 96 384 96l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-26.9 0-52.3 6.6-74.5 18.4zM160 160A64 64 0 1 1 32 160a64 64 0 1 1 128 0zM306.5 325.9C329 341.4 356.5 352 384 352c26.9 0 55.4-10.8 77.4-26.1c0 0 0 0 0 0c11.9-8.5 28.1-7.8 39.2 1.7c14.4 11.9 32.5 21 50.6 25.2c17.2 4 27.9 21.2 23.9 38.4s-21.2 27.9-38.4 23.9c-24.5-5.7-44.9-16.5-58.2-25C449.5 405.7 417 416 384 416c-31.9 0-60.6-9.9-80.4-18.9c-5.8-2.7-11.1-5.3-15.6-7.7c-4.5 2.4-9.7 5.1-15.6 7.7c-19.8 9-48.5 18.9-80.4 18.9c-33 0-65.5-10.3-94.5-25.8c-13.4 8.4-33.7 19.3-58.2 25c-17.2 4-34.4-6.7-38.4-23.9s6.7-34.4 23.9-38.4c18.1-4.2 36.2-13.3 50.6-25.2c11.1-9.4 27.3-10.1 39.2-1.7c0 0 0 0 0 0C136.7 341.2 165.1 352 192 352c27.5 0 55-10.6 77.5-26.1c11.1-7.9 25.9-7.9 37 0z"/></svg>
+            <h1>WaterLand</h1>
+        </div>
+        <div class="lables">
+            <span style="color: #3CBEEE;">Home</span>
+            <span>About</span>
+            <span>Service</span>
+            <span>Blog</span>
+            <span>Pages <i class="fa-solid fa-caret-down"></i></span>
+            <span>Contact</span>
+        </div>
+        <div class="icos">
+            <div class="sm">
+                <i class="fa-brands fa-facebook fa-xl"></i>
+                <i class="fa-brands fa-twitter fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+            </div>
+        </div>
+        <div class="gs">
+            <p>Get Started</p>
+        </div>
+    </nav>
+    <header>
+        <div class="bannerbg">
+            <div class="banner">
+                <div class="sec1">
+                <p class="top">WELCOME TO WATERLAND</p>
+                <h1>THE GREATEST WATER AND AMUSEMENT PARK</h1>
+                <p class="lo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... </p>
+                <button>Our Packages</button>
+            </div>
+            <div class="sec2">
+                <h1>BOOK YOUR TICKET</h1>
+                <input style="width: 100%;" type="text" placeholder="Your Name">
+                <input style="margin-right: 23px;width: 190px;" type="text" placeholder="Your Email">
+                <input style="width: 180px;" type="text" placeholder="Phone">
+                <select id="select">
+                    <option value="">Select Packages</option>
+                    <option value="dog">Family Packages</option>
+                    <option value="dog">Basic Packages</option>
+                    <option value="dog">Premium Packages</option>
+                  </select>
+                  <input id="date" type="date" id="start" name="trip-start" value="dd-mm-yyyy" />
+                  <input style="width: 100%;" type="text" placeholder="0">
+                  <button class="submit">Book Now</button>
+            </div>
+            </div>
+        </div>
+    </header>
+    <section class="grid">
+        <div class="con">
+            <p>Our Gallery</p>
+            <h1 class="t">Captured Moments In Waterland</h1>
+            <p class="lor">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.</p>
+        </div>
+    </section>
+</body>
+<script src="https://kit.fontawesome.com/e1bd217f15.js" crossorigin="anonymous"></script>
+</html>
